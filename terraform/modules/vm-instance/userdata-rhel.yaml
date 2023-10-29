@@ -1,0 +1,41 @@
+#cloud-config
+write_files:
+- path: /etc/security/limits.d/kubernetes.conf
+  content: |
+    *               soft    nofile            65535
+    *               hard    nofile            65535
+    *               soft    nproc            65535
+    *               hard    nproc            65535
+yum_repos:
+    kubernetes:
+        baseurl: https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/
+        name: Kubernetes
+        enabled: true
+        gpgcheck: true
+        gpgkey: https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg  https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+    docker-ce-stable:
+        name: Docker CE Stable - $basearch
+        baseurl: https://download.docker.com/linux/centos/7/$basearch/stable
+        enabled: true
+        gpgcheck: true
+        gpgkey: https://download.docker.com/linux/centos/gpg
+users:
+  - default
+  - name: jennningsl
+    primary_group: jenningsl
+    groups: [adm,wheel,systemd-journal]
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh_authorized_keys:
+    - ssh-rsa /vkg5UkzRH9SVAjejS7BGceYrzjI4Stk5/qp//dY9AygVB6r82M+qUAL+COdVqgypzY9TmxBiL8+e5+++/yeWrIu5cPx0MLfn7BfTM++
+
+ntp:
+  enabled: true
+  ntp_client: chrony
+  servers:
+    - 147.204.9.202
+    - 147.204.9.203
+    - 147.204.9.204
+runcmd:
+- sed -i  's/-H\s\S*\s//g'  /lib/systemd/system/docker.service
+- systemctl daemon-reload
+- systemctl restart docker

@@ -1,0 +1,50 @@
+#cloud-config
+apt:
+  preserve_sources_list: true
+  sources:
+      kubernetes.list:
+          source: "deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main"
+          keyid: 6A030B21BA07F4FB
+          keyserver: keyserver.ubuntu.com
+      docker-ce.list:
+          source: "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+          keyid: 0EBFCD88
+          keyserver: p80.pool.sks-keyservers.net
+write_files:
+- path: /etc/security/limits.d/kubernetes.conf
+  content: |
+    *               soft    nofile            65535
+    *               hard    nofile            65535
+    *               soft    nproc            65535
+    *               hard    nproc            65535
+users:
+  - default
+  - name: jennningsl
+    primary_group: jenningsl
+    groups: [adm,wheel,systemd-journal]
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh_authorized_keys:
+    - ssh-rsa /vkg5UkzRH9SVAjejS7BGceYrzjI4Stk5/qp//dY9AygVB6r82M+qUAL+COdVqgypzY9TmxBiL8+e5+++/yeWrIu5cPx0MLfn7BfTM++
+
+packages:
+- linux-image-generic-hwe-18.04
+- jq
+- golang-cfssl
+- nfs-common
+- ipvsadm
+- ipset
+apt_update: true
+apt_upgrade: true
+apt_reboot_if_required: true
+
+runcmd:
+- sed -i  's/-H\s\S*\s//g'  /lib/systemd/system/docker.service
+- systemctl daemon-reload
+- systemctl restart docker
+ntp:
+  enabled: true
+  ntp_client: chrony
+  servers:
+    - 147.204.9.202
+    - 147.204.9.203
+    - 147.204.9.204
