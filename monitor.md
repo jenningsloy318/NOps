@@ -11,7 +11,7 @@ _class: lead
 
 # 监控
 
-###### 京东云
+###### Jennings Liu
 <!-- _class: cover_b fixedtitleA
 <!-- _header: "" -->
 <!-- _footer: "" -->
@@ -28,8 +28,32 @@ _class: lead
 <!-- _header: \ ***云运维*** **监控设计** *监控内容* *监控报告* -->
 <!-- _class:  navbar bq-green fixedtitleA  -->
 
-  ![设计](./images/monitoring01.png)
+  ![design](./images/monitoring01.png)
 
+## 监控设计
+<!-- _header: \ ***云运维*** **监控设计** *监控内容* *监控报告* -->
+<!-- _class: cols-2  navbar bq-green fixedtitleA  -->
+
+<div class=limg>
+![#prometheus-metrics](./images/prometheus-01.png)
+</div>
+
+<div class=rimg>
+![#prometheus-alerts](./images/prometheus-02.png)
+</div>
+
+## 监控设计
+<!-- _header: \ ***云运维*** **监控设计** *监控内容* *监控报告* -->
+<!-- _class: cols-2  navbar bq-green fixedtitleA  -->
+
+<div class=limg>
+![#grafana](./images/grafana-01.png)
+</div>
+
+<div class=rimg>
+![#alertmaanger](./images/alertmanager-01.png)
+![#alertmaanger2](./images/alertmanager-02.png)
+</div>
 ## 监控内容
 <!-- _header: \ ***云运维*** *监控设计* **监控内容** *监控报告*-->
 <!-- _class:  navbar bq-green fixedtitleA  -->
