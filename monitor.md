@@ -27,7 +27,7 @@ _class: lead
 <!-- _header: \ ***云运维*** **监控设计** *监控内容* *监控报告* -->
 <!-- _class:  navbar bq-green fixedtitleA  -->
 
-  ![design](./images/monitoring01.png)
+  ![bg 82%](./images/monitoring01.png)
 
 ## 监控设计
 <!-- _header: \ ***云运维*** **监控设计** *监控内容* *监控报告* -->
@@ -41,9 +41,9 @@ _class: lead
 <!-- _header: \ ***云运维*** **监控设计** *监控内容* *监控报告* -->
 <!-- _class: navbar bq-green fixedtitleA  -->
 
-![bg fit](./images/grafana-01.png)
+![bg 95%](./images/grafana-01.png)
 
-![bg fit 70%](./images/grafana-02.png)
+![bg 65%](./images/grafana-02.png)
 
 ## 监控设计
 <!-- _header: \ ***云运维*** **监控设计** *监控内容* *监控报告* -->
