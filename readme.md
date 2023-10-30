@@ -4,7 +4,6 @@ theme: am_blue
 size: 16:9
 paginate: true
 headingDivider: 2
-footer: Jennings Liu
 _class: lead
 ---
 

@@ -4,7 +4,6 @@ theme: am_blue
 size: 16:9
 paginate: true
 headingDivider: 2
-footer: Jennings Liu
 _class: lead
 ---
 
@@ -34,26 +33,26 @@ _class: lead
 <!-- _header: \ ***云运维*** **监控设计** *监控内容* *监控报告* -->
 <!-- _class: cols-2  navbar bq-green fixedtitleA  -->
 
-<div class=limg>
-![#prometheus-metrics](./images/prometheus-01.png)
-</div>
+![bg fit 90%](./images/prometheus-01.png)
 
-<div class=rimg>
-![#prometheus-alerts](./images/prometheus-02.png)
-</div>
+![bg fit](./images/prometheus-02.png)
 
 ## 监控设计
 <!-- _header: \ ***云运维*** **监控设计** *监控内容* *监控报告* -->
-<!-- _class: cols-2  navbar bq-green fixedtitleA  -->
+<!-- _class: navbar bq-green fixedtitleA  -->
 
-<div class=limg>
-![#grafana](./images/grafana-01.png)
-</div>
+![bg fit](./images/grafana-01.png)
 
-<div class=rimg>
-![#alertmaanger](./images/alertmanager-01.png)
-![#alertmaanger2](./images/alertmanager-02.png)
-</div>
+![bg fit 70%](./images/grafana-02.png)
+
+## 监控设计
+<!-- _header: \ ***云运维*** **监控设计** *监控内容* *监控报告* -->
+<!-- _class:  navbar bq-green fixedtitleA  -->
+
+![bg  fit 90%](./images/alertmanager-01.png)
+
+![bg fit](./images/alertmanager-02.png)
+
 ## 监控内容
 <!-- _header: \ ***云运维*** *监控设计* **监控内容** *监控报告*-->
 <!-- _class:  navbar bq-green fixedtitleA  -->
@@ -97,6 +96,6 @@ _class: lead
 
 - grafana 仪表板
 
-> 月报
+> 监控报告
 
-- 可以采用固定PPT模版，使用自动化的脚本每月生成报告
+- 可以采用PPT模版，使用自动化的脚本生成报告
