@@ -99,3 +99,6 @@ _class: lead
 > 监控报告
 
 - 可以采用PPT模版，使用自动化的脚本生成报告
+  - [Grafana API – Export Graph as png image](https://mattionline.de/grafana-api-export-graph-as-png/)
+  - [利用python-pptx库读写操作PPT,批量自动生成或修改的PPT](https://www.dszhp.com/python-pptx.html)
+- [使用Marp创建PPT报告](https://marpit.marp.app/)
